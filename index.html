@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ee">
+  <meta name="description" content="A quiet corner of the internet for collecting visual inspiration.">
+  <title>Fieldnotes — a visual search studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Fieldnotes home">
+      <span class="brand-mark" aria-hidden="true">f.</span>
+      <span>fieldnotes<span class="brand-period">.</span></span>
+    </a>
+    <span class="topbar-note"><span class="status-dot" aria-hidden="true"></span> YOUR VISUAL RESEARCH DESK</span>
+    <a class="about-link" href="#about">ABOUT <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow">A LITTLE SPACE TO LOOK CLOSER</p>
+        <h1 id="page-title">Follow a thought.<br><em>Find its feeling.</em></h1>
+        <p class="tagline">Search the visual world for the colors, places, and details on your mind.</p>
+      </div>
+      <div class="index-stamp" aria-hidden="true"><span>ISSUE</span><strong>№ 01</strong><span>OPEN EDITION</span></div>
+    </section>
+
+    <section class="search-section" aria-labelledby="search-heading">
+      <div class="section-heading">
+        <span class="section-number">01 / EXPLORE</span>
+        <h2 id="search-heading">What are you looking for?</h2>
+      </div>
+      <form class="search-form" role="search">
+        <label class="visually-hidden" for="visual-query">Search for a place, color, object, or idea</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="visual-query" name="q" type="search" placeholder="Try “quiet mornings” or “coastal forms”" autocomplete="off">
+        <button id="search-button" type="submit">Search <span aria-hidden="true">→</span></button>
+      </form>
+      <div class="suggestions" aria-label="Suggested topics">
+        <span class="suggestion-label">A PLACE TO BEGIN</span>
+        <button class="topic-chip" type="button">Soft architecture <span>↗</span></button>
+        <button class="topic-chip" type="button">Sunday markets <span>↗</span></button>
+        <button class="topic-chip" type="button">Desert botanicals <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="results-topline">
+        <div><span class="section-number">02 / YOUR CANVAS</span><h2 id="results-heading">A fresh page</h2></div>
+        <span class="result-count">0 NOTES <span aria-hidden="true">·</span> READY WHEN YOU ARE</span>
+      </div>
+      <div id="results" class="results-grid" aria-live="polite" aria-label="Image search results"></div>
+      <div class="empty-state">
+        <div class="empty-illustration" aria-hidden="true"><span class="sun"></span><span class="horizon"></span><span class="hill hill-one"></span><span class="hill hill-two"></span><span class="tiny-star">✳</span></div>
+        <p class="empty-title">Your next idea starts here.</p>
+        <p class="empty-copy">Enter a subject above and your visual collection will take shape in this space.</p>
+        <span class="empty-caption">NO IMAGES YET <span>—</span> JUST POSSIBILITY</span>
+      </div>
+    </section>
+  </main>
+
+  <footer id="about"><span>FIELDNOTES STUDIO</span><span>COLLECT THE THINGS THAT CATCH YOUR EYE.</span><span>PART 01 <span class="footer-mark">✳</span></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
