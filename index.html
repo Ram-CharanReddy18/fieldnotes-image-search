@@ -36,27 +36,31 @@
         <span class="section-number">01 / EXPLORE</span>
         <h2 id="search-heading">What are you looking for?</h2>
       </div>
-      <form class="search-form" role="search">
+      <form id="search-form" class="search-form" role="search">
         <label class="visually-hidden" for="visual-query">Search for a place, color, object, or idea</label>
         <span class="search-icon" aria-hidden="true">⌕</span>
         <input id="visual-query" name="q" type="search" placeholder="Try “quiet mornings” or “coastal forms”" autocomplete="off">
-        <button id="search-button" type="submit">Search <span aria-hidden="true">→</span></button>
+        <div class="search-actions">
+          <button id="clear-button" class="clear-button" type="button">Clear</button>
+          <button id="search-button" type="submit">Search <span aria-hidden="true">→</span></button>
+        </div>
       </form>
       <div class="suggestions" aria-label="Suggested topics">
         <span class="suggestion-label">A PLACE TO BEGIN</span>
-        <button class="topic-chip" type="button">Soft architecture <span>↗</span></button>
-        <button class="topic-chip" type="button">Sunday markets <span>↗</span></button>
-        <button class="topic-chip" type="button">Desert botanicals <span>↗</span></button>
+        <button class="topic-chip" type="button" data-query="Soft architecture">Soft architecture <span>↗</span></button>
+        <button class="topic-chip" type="button" data-query="Sunday markets">Sunday markets <span>↗</span></button>
+        <button class="topic-chip" type="button" data-query="Desert botanicals">Desert botanicals <span>↗</span></button>
       </div>
     </section>
 
     <section class="results-section" aria-labelledby="results-heading">
       <div class="results-topline">
         <div><span class="section-number">02 / YOUR CANVAS</span><h2 id="results-heading">A fresh page</h2></div>
-        <span class="result-count">0 NOTES <span aria-hidden="true">·</span> READY WHEN YOU ARE</span>
+        <span id="result-count" class="result-count">0 NOTES <span aria-hidden="true">·</span> READY WHEN YOU ARE</span>
       </div>
+      <p id="results-status" class="results-status" role="status" aria-live="polite">Choose a topic or enter a search to begin.</p>
       <div id="results" class="results-grid" aria-live="polite" aria-label="Image search results"></div>
-      <div class="empty-state">
+      <div id="empty-state" class="empty-state">
         <div class="empty-illustration" aria-hidden="true"><span class="sun"></span><span class="horizon"></span><span class="hill hill-one"></span><span class="hill hill-two"></span><span class="tiny-star">✳</span></div>
         <p class="empty-title">Your next idea starts here.</p>
         <p class="empty-copy">Enter a subject above and your visual collection will take shape in this space.</p>

@@ -1,3 +1,3 @@
 # Fieldnotes
 
-Fieldnotes is a small visual research desk for collecting images around a thought, place, color, or feeling. This Part 1 project builds the responsive search interface and an empty canvas where future results can appear. Search suggestions and the quiet empty state help visitors understand how to begin. Image fetching and search behavior are intentionally reserved for Part 2.
+Fieldnotes is a visual search desk that finds freely shared image files from Wikimedia Commons by topic. The layout pairs a calm paper, green, and rust palette with a responsive image grid so the pictures stay in focus on every screen. Suggested searches make it easy to explore, while each image links back to its source and license details. Search is powered by the public Wikimedia Commons API and needs no API key.
