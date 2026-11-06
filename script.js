@@ -7,6 +7,7 @@ const results = document.getElementById("results");
 const status = document.getElementById("results-status");
 const resultCount = document.getElementById("result-count");
 const emptyState = document.getElementById("empty-state");
+const resultsHeading = document.getElementById("results-heading");
 
 let activeSearch = null;
 let searchSequence = 0;
@@ -36,6 +37,7 @@ clearButton.addEventListener("click", () => {
   results.innerHTML = "";
   resultCount.textContent = "0 NOTES · READY WHEN YOU ARE";
   status.textContent = "Choose a topic or enter a search to begin.";
+  resultsHeading.textContent = "A fresh page";
   emptyState.hidden = false;
   searchButton.disabled = false;
   input.focus();
@@ -62,6 +64,7 @@ async function searchImages(query) {
   searchButton.disabled = true;
   resultCount.textContent = "SEARCHING…";
   status.textContent = `Looking for “${query}” on Wikimedia Commons…`;
+  resultsHeading.textContent = `Results for “${query}”`;
 
   // encodeURIComponent keeps multi-word and special-character searches valid.
   const url =
